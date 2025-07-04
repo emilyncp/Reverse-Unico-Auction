@@ -1,0 +1,508 @@
+.navbar-brand
+{
+	padding: 8px 15px;
+}
+#loading,#loading_payment_tab,#loading_timetable_tab { display:none; }
+/* ================================================================================	*/
+/* BODY & OUTER LAYOUT																*/
+/* ================================================================================	*/
+html, 
+body {
+    width: 100%;
+    height: 100%;
+}
+.table-box {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.table-box .vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.table-box .vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+/* ================================================================================	*/
+/* HEADING STYLES																*/
+/* ================================================================================	*/
+h3.red{
+	color:#FF3232;
+}
+h3.yellow{
+	color:#ffc107;
+}
+h3.green{
+	color:#36b70c;
+}
+ h3.violet{
+	color:#9c27b0;
+}
+h3.orange{
+	color:#ff5722;
+}
+h3.pink{
+	color:#e91e63;
+}
+h3.blue1{
+	color:#3f51b5;
+}
+h3.brown{
+	color:#795548;
+}
+h3.lime{
+	color:#607d8b;
+}
+/* ================================================================================	*/
+/* INPUT STYLES 																	*/
+/* ================================================================================	*/
+.form-control{
+	padding:0px;
+	border:none;
+	margin-bottom:15px;
+	height: 45px;
+}
+input[type="text"],input[type="password"],input[type="number"],
+input[type="email"],input[type="date"],input[type="time"],input[type="file"],input[type="url"],
+select,textarea {
+    border-radius: 3px;
+	background-color:#fff;
+    color: #000000;
+    font-size: 16px;
+    height: 46px !important;
+    padding: 13px 13px;
+    width: 100%;
+	border: 1px solid #ccc;
+}
+textarea{
+	height:inherit !important;
+	  border-radius: 3px;
+	background-color:#fff;
+    color: #000000;
+    font-size: 16px;
+    padding: 13px 13px;
+    width: 100%;
+	border: 1px solid #ccc;
+}
+select option{
+	font-size: 16px !important;
+	font-weight:600;
+	padding-top: 10px !important;
+	outline:none;
+}
+input[type="text"]:focus,input[type="password"]:focus,
+input[type="email"]:focus,input[type="date"]:focus,
+input[type="file"]:focus,input[type="url"]:focus,
+select:focus,textarea:focus  {
+	border: 1px solid #ccc;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset !important;
+    background-color: rgba(0,0,0,0.01);
+    color: #000000;
+	outline:none;
+}
+input[type="text"]:hover,input[type="password"]:hover,
+input[type="email"]:hover,input[type="date"]:hover,
+input[type="file"]:hover,input[type="url"]:hover,
+select:hover,textarea:hover  {
+	border: 1px solid #ccc;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+    color: #000000;
+}
+/* ================================================================================	*/
+/* MULTIRANGE CONTROL 																*/
+/* ================================================================================	*/
+.mulirange-control {
+	padding: 0;
+	text-align: center;
+	position:relative;
+	margin-bottom:30px;
+}
+.mulirange-control>span#start,.mulirange-control>span#end{
+	position:absolute;
+	font-size:16px;
+	font-weight:700;
+}
+.mulirange-control>span#start{
+	bottom:-20px;
+	left:10px;
+}
+.mulirange-control>span#end{
+	bottom:-20px;
+	right:10px;
+}
+/* MULTI RANGE INPUT */
+@supports (--css: variables) {
+input[type=range].multirange{
+	-webkit-appearance: none;
+	padding:0;
+	margin: 0;
+	display: inline-block;
+	background-color:#FFF;
+	border-radius:10px;
+	border: 1px solid #ccc;
+}
+input[type=range].multirange:focus{
+	outline: none;
+}
+input[type=range].multirange.original {
+	position: absolute;
+}
+input[type=range].multirange.original::-webkit-slider-thumb {
+	position: relative;
+	z-index: 1;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	height: 21px;
+	width: 19px;
+	border-radius: 23px;
+	background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type=range].multirange.ghost::-webkit-slider-thumb {
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	height: 21px;
+	width: 19px;
+	border-radius: 23px;
+	background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type=range].multirange.original::-moz-range-thumb {
+	transform: scale(1); /* FF doesn't apply position it seems */
+	z-index: 1;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	height: 21px;
+	width: 19px;
+	border-radius: 23px;
+	background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type=range].multirange.ghost::-moz-range-thumb {
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	height: 21px;
+	width: 19px;
+	border-radius: 23px;
+	background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type=range].multirange.ghost {
+	position: relative;
+	background: var(--track-background);
+	--track-background: linear-gradient(to right,
+	transparent var(--low), var(--range-color) 0,
+	var(--range-color) var(--high), transparent 0
+	) no-repeat 0 45% / 100% 40%;
+	--range-color: hsl(0, 100%, 60%);
+}
+input[type=range].multirange.ghost::-webkit-slider-runnable-track {
+	background: var(--track-background);
+}
+input[type=range].multirange.ghost::-moz-range-track {
+	background: var(--track-background);
+}
+}
+
+/* ================================================================================	*/
+/* MODALS																			*/
+/* ================================================================================	*/
+.modal{
+	margin-top:60px;
+}
+.signin .modal-dialog,.signup .modal-dialog,.packages .modal-dialog {
+    width: 350px;
+}
+.signin .modal-footer,.signup .modal-footer,.packages .modal-footer{
+    border-top: 0;
+    margin-top: 0px;
+    padding: 10px 20px 20px;
+	border-radius:6px;
+}
+.signin .modal-header,.signup .modal-header,.packages .modal-header {
+    border: 0 none;
+    padding: 15px 15px 15px;
+}
+.signin .forgot {
+	color: rgba(0, 0, 0, 0.3);
+	margin-top: 5px;
+	display:block;
+	text-align:right;
+	text-decoration:underline;
+}
+.signin .registernow,.signup .signinrnow{
+    color: #797979;
+    margin-left: 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+/* ================================================================================	*/
+/* INBOX																			*/
+/* ================================================================================	*/
+div.inbox{
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+div.inbox>div.inbox-head{
+	background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
+	text-align:left;
+	border-radius:0px;
+    color: #FFFFFF;
+	min-height:30px;
+    padding: 20px;
+}
+div.inbox-head>h3{
+	margin: 0;
+}
+div.inbox-head>a.delbttn-main{
+	position:absolute;
+	right:50px;
+	top:25px;
+	color:#fff;
+}
+div.inbox>table.table-inbox{
+    border: 1px solid #d3d3d3;
+    margin-bottom: 0;
+}
+div.inbox>table.table-inbox>tbody>tr td {
+    padding: 12px !important;
+	text-align:left;
+}
+div.inbox>table.table-inbox>tbody>tr td>a {
+	color:#000000;
+	text-decoration:none;
+	outline:none;
+	display:block;
+}
+div.inbox>table.table-inbox>tbody>tr td.text-right {
+	text-align:right;
+}
+div.inbox>table.table-inbox>tbody>tr td:hover {
+    cursor: pointer;
+}
+div.inbox>table.table-inbox>tbody>tr.unread td {
+    background: #f7f7f7;
+    font-weight: 600;
+}
+div.inbox>table.table-inbox>tbody>tr td>a.delbttn-each{
+	transition: all 3s ease-in-out;
+	opacity: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;	
+}
+div.inbox>table.table-inbox>tbody>tr:hover a.delbttn-each{
+    opacity: 1;
+}
+div.inbox>table.table-inbox>tbody>tr td.inbox-small-cells{
+	width:5px;
+}
+
+/* ================================================================================	*/
+/* PAYMENT-BOX, TIMETABLE-SEARCH , TIMETABLE-BOOKING, SETTINGS																	*/
+/* ================================================================================	*/
+div.payment-box,div.tt-search
+,div.tt-settings,div.tt-booking,
+div.tt-feedback-entry{
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+div.payment-box>table.table-inbox,
+div.tt-search>table.table-inbox,
+div.tt-booking>table.table-inbox,
+div.tt-settings>table.table-inbox,
+div.tt-feedback-entry>table.table-inbox{
+    border: 1px solid #d3d3d3;
+    margin-bottom: 0;
+	background-color:#fff;
+}
+div.payment-box>table.table-inbox>tbody>tr th,
+div.tt-search>table.table-inbox>tbody>tr th,
+div.tt-booking>table.table-inbox>tbody>tr th,
+div.tt-settings>table.table-inbox>tbody>tr th,
+div.tt-feedback-entry>table.table-inbox>tbody>tr th{
+	background-color:rgba(0,0,0,.06);
+}
+div.payment-box>table.table-inbox>tbody>tr td,
+div.payment-box>table.table-inbox>tbody>tr th,
+div.tt-search>table.table-inbox>tbody>tr td,
+div.tt-search>table.table-inbox>tbody>tr th,
+div.tt-booking>table.table-inbox>tbody>tr td,
+div.tt-booking>table.table-inbox>tbody>tr th,
+div.tt-settings>table.table-inbox>tbody>tr td,
+div.tt-settings>table.table-inbox>tbody>tr th,
+div.tt-feedback-entry>table.table-inbox>tbody>tr td,
+div.tt-feedback-entry>table.table-inbox>tbody>tr th  {
+    padding: 12px !important;
+	text-align:left;
+}
+div.payment-box>table.table-inbox>tbody>tr td>a.tutor,
+div.payment-box>table.table-inbox>tbody>tr td>a,
+div.tt-search>table.table-inbox>tbody>tr td>a,
+div.tt-booking>table.table-inbox>tbody>tr td>a{
+	text-decoration:none;
+	outline:none;
+}
+div.payment-box>table.table-inbox>tbody>tr td>a.tutor,
+div.payment-box>table.table-inbox>tbody>tr td>a.student,
+div.payment-box>table.table-inbox>tbody>tr td>a.ban,
+div.tt-search>table.table-inbox>tbody>tr td>a.student{
+	color:#ff0e0e;
+	font-weight:600;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span,
+div.tt-search>table.table-inbox>tbody>tr td>span,
+div.tt-booking>table.table-inbox>tbody>tr td>span{
+	font-style:italic;
+	font-weight:600;
+}
+div.tt-settings>table.table-inbox>tbody>tr td>span{
+	font-weight:600;
+	font-size:16px;
+	display:block;
+	padding:10px;
+}
+div.tt-feedback-entry>table.table-inbox>tbody>tr td>span{
+	font-weight:600;
+	font-size:16px;
+	display:block;
+	padding:10px;
+}
+div.tt-settings>table.table-inbox>tbody>tr td>span.value{
+	color:#ff5722;
+}
+div.tt-booking>table.table-inbox>tbody>tr td>span.student,
+div.payment-box>table.table-inbox>tbody>tr td>span.student{
+	color:#ff0e0e;
+	font-weight:600;
+	font-style:normal;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.verification,
+div.tt-search>table.table-inbox>tbody>tr td>span.notstartd,
+div.tt-booking>table.table-inbox>tbody>tr td>span.notstartd{
+	color:#ff5722;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.verified,
+div.tt-search>table.table-inbox>tbody>tr td>span.started,
+div.tt-booking>table.table-inbox>tbody>tr td>span.tokenverified{
+	color:#3f51b5;
+}
+div.tt-booking>table.table-inbox>tbody>tr td>span.refundrequest{
+	color:red;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.approved,
+div.tt-search>table.table-inbox>tbody>tr td>span.finished,
+div.tt-booking>table.table-inbox>tbody>tr td>span.requestpayment{
+	color:#36b70c;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.token,
+div.payment-box>table.table-inbox>tbody>tr td>span.amount,
+div.tt-search>table.table-inbox>tbody>tr td>span.token,
+div.tt-booking>table.table-inbox>tbody>tr td>span.token,
+div.tt-booking>table.table-inbox>tbody>tr td>span.skypeid{
+	color:#607d8b;
+	font-style:normal;
+	font-weight:700;
+	letter-spacing:2px;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.balance{
+	color:rgba(0,0,0,.5);
+	font-weight:700;
+	display:block;
+	text-align:right;
+}
+div.payment-box>table.table-inbox>tbody>tr td>span.classinfo{
+	color:rgba(0,0,0,.5);
+	font-weight:600;
+	display:block;
+	text-align:center;
+}
+div.tt-booking>table.table-inbox>tbody>tr td>span.paymentverification{
+	color:rgba(0,0,0,.5);
+	font-style:normal;
+	font-weight:700;
+	letter-spacing:1px;
+}
+div.tt-booking>table.table-inbox>tbody>tr td>span.paymentverified{
+	color:#36b70c;
+	font-style:normal;
+	font-weight:700;
+	letter-spacing:1px;
+}
+div.tt-search>table.table-inbox>tbody>tr td>span.noclass,
+div.tt-search>table.table-inbox>tbody>tr td>a.noclass,
+div.tt-booking>table.table-inbox>tbody>tr td>span.noclass{
+	color:rgba(0,0,0,.2);
+	font-style:normal;
+	font-weight:500;
+	
+}
+div.payment-box>div.total-payment-box>h2{
+	border-bottom:5px double #000000;
+	display:inline-block;
+	margin-right:20px;
+}
+div.payment-box>div.total-payment-box>h2>span{
+	color:#ff0e0e;
+	font-weight:700;
+}
+
+
+
+
+
+/* timetable */
+
+@media(min-width:576px){
+	.weeks .btn-orange{
+		margin-bottom:10px;
+	}
+}
+
+@media(max-width:767px){
+	.weeks .btn-orange{
+		margin-bottom:10px;
+	}
+}
+
+
+  a.select {
+	transition:0.1s;
+    background:#e0e0e0 !important;
+	color:#ff5722;
+	
+}
+.timecontain{
+	padding:5px;
+	
+}
+ a.clid:hover{
+	background:#e0e0e0;
+	}
+
+ a.clid{
+	text-decoration:none;
+	display:block;
+	padding:15px;
+	font-weight:bold;
+		border:1px solid #ddd;
+	transition:0.1s;
+background-color:#fff;	
+}
